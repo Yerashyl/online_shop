@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>This is a list of our categories</h2>
+        <ul>
+            {% for category in response %}
+                <li>
+                    <a>{{ category.name }}</a>
+                    <p>{{ category.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
